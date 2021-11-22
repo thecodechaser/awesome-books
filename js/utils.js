@@ -32,7 +32,7 @@ export const removeBook = () => {
       ul.removeChild(list);
       const bookTitle = list.childNodes[5].value;
       const remain = bookData.filter((book) => book.title !== bookTitle);
-      localStorage.setItem("book", JSON.stringify(remain));
+      localStorage.setItem('book', JSON.stringify(remain));
     }
   });
 };
