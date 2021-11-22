@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, height=device-height, initial-scale=1.0"
     />
+  
     <!-- #### stylesheets ####  -->
     <link rel="stylesheet" href="css/main.css" />
     <title>Awesome Books</title>
@@ -15,12 +16,15 @@
     
     <main>
       <h1>Awesome Books</h1>
-      <form>
-        <input placeholder="title" class="title"><br><br>
-        <input placeholder="author" class="author"><br><br>
-        <button type="button" class="btn-add">Add</button>
-      </form>
+      <div class="container">
+        <form class="form">
+          <input placeholder="title" class="title" required><br><br>
+          <input placeholder="author" class="author" required><br><br>
+          <input type="submit" class="btn-add" value="Add">
+        </form>
+      </div>
+    
     </main>
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>
