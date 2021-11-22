@@ -31,7 +31,8 @@ export const removeBook = () => {
       const list = e.target.parentElement;
       ul.removeChild(list);
       const bookTitle = list.childNodes[5].value;
-      bookData.filter((book) => book.title !== bookTitle);
+      const remain = bookData.filter((book) => book.title !== bookTitle);
+      localStorage.setItem("book", JSON.stringify(remain));
     }
   });
 };
