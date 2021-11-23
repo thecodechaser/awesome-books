@@ -35,9 +35,23 @@ class Book {
       this.form.reset();
     });
   }
+
+  removeBook() {
+    this.ul.addEventListener('click', (e) => {
+      if (e.target.classList.contains('remove')) {
+        const list = e.target.parentElement;
+        this.ul.removeChild(list);
+        const title = list.childNodes[5].value;
+        this.bookData.filter((book) => book.title !== title);
+      }
+    });
+  }
+  
 }
 
 const title = document.querySelector('.title');
 const author = document.querySelector('.author');
 const book = new Book(title, author);
 book.addBook();
+book.removeBook();
+
