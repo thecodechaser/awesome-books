@@ -46,7 +46,23 @@ class Book {
       }
     });
   }
-  
+
+  fetchDatafromStore = () => {
+    window.addEventListener('load', () => {
+      if (localStorage.getItem('book')) {
+        const books = JSON.parse(localStorage.getItem('book'));
+        books.forEach((data) => {
+          this.ul.innerHTML += `<li>
+                  <p>${data.titleVal}</p>
+                  <p>${data.authorVal}</p>
+                  <button class="remove" value=${this.title.value} >Remove</button>
+                  <hr/>
+                  </li>`;
+          this.bookData.push(books);
+        });
+      }
+    });
+  };
 }
 
 const title = document.querySelector('.title');
@@ -54,4 +70,4 @@ const author = document.querySelector('.author');
 const book = new Book(title, author);
 book.addBook();
 book.removeBook();
-
+book.fetchDatafromStore();
