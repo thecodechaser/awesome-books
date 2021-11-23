@@ -1,1 +1,15 @@
 /* stylesheet */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.main-heading {
+  text-align: center;
+}
+
+.list-of-book{
+  border: 2px solid black;
+}
