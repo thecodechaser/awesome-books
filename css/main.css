@@ -13,3 +13,19 @@ body {
 .list-of-book{
   border: 2px solid black;
 }
+
+.book-items {
+  margin: 0;
+  padding: 0;
+}
+
+.book-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.book-item:nth-child(odd) {
+ background-color: rgba(128, 128, 128, 0.288);
+}
