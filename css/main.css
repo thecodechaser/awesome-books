@@ -1,16 +1,16 @@
 /* stylesheet */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .main-heading {
   text-align: center;
 }
 
-.list-of-book{
+.list-of-book {
   border: 2px solid black;
 }
 
@@ -27,5 +27,21 @@ body {
 }
 
 .book-item:nth-child(odd) {
- background-color: rgba(128, 128, 128, 0.288);
+  background-color: rgba(128, 128, 128, 0.288);
+}
+
+.book-item:last-child {
+  padding-bottom: 8px;
+}
+.book-data {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.remove {
+  margin-left: auto;
+  height: 20px;
+  border: 2px solid black;
+  box-shadow: 2px 2px;
 }
