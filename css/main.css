@@ -45,3 +45,18 @@ body {
   border: 2px solid black;
   box-shadow: 2px 2px;
 }
+
+form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  padding: 5px;
+  width: 250px;
+  border: 2px solid black;
+}
+::placeholder {
+  font-weight: bold;
+  color: black;
+}
