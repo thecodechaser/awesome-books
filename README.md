@@ -6,7 +6,13 @@
 
 ## Screenshots:
 
+### Mobile
+
 ![screenshot](./images/Screenshot1.png)
+
+### Desktop
+
+![screenshot](./images/Screenshot2.png)
 
 Porject's features are added into seperate branch to keep main branch safe.
 
