@@ -4,14 +4,28 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background:
+    linear-gradient(to right, #606c8869, #7380a0),
+    url('../images/bg.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
 }
 
 .main-heading {
   text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+h2 {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .list-of-book {
-  border: 2px solid black;
+  border: 2px solid #483737;
+  background: #fff;
 }
 
 .book-items {
@@ -33,29 +47,36 @@ body {
 .book-item:last-child {
   padding-bottom: 8px;
 }
+
 .book-data {
   margin-bottom: 5px;
   margin-top: 5px;
   font-size: 15px;
   font-weight: bolder;
 }
+
 .remove {
   margin-left: auto;
   height: 20px;
-  border: 2px solid black;
-  box-shadow: 2px 2px;
+  border: 2px solid #483737;
+  box-shadow: 2px 2px #483737;
+  color: #fff;
+  background: #dc3545;
+  font-weight: 400;
 }
 
-form-container {
+.form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 input {
   padding: 5px;
   width: 250px;
-  border: 2px solid black;
+  border: 2px solid #483737;
 }
+
 ::placeholder {
   font-weight: bold;
   color: black;
@@ -64,7 +85,16 @@ input {
 .btn-add {
   font-weight: bold;
   margin-left: 215px;
-  border: 2px solid black;
+  border: 2px solid #483737;
   padding: 4px 10px;
-  box-shadow: 2px 2px;
+  box-shadow: 2px 2px #000;
+  color: #fff;
+  background: #28a745;
+}
+
+hr {
+  width: 100px;
+  margin-top: 30px;
+  background-color: #000;
+  height: 3px;
 }
