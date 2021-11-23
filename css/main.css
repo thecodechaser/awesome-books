@@ -87,7 +87,7 @@ input {
   margin-left: 215px;
   border: 2px solid #483737;
   padding: 4px 10px;
-  box-shadow: 2px 2px #000;
+  box-shadow: 2px 2px #483737;
   color: #fff;
   background: #28a745;
 }
@@ -97,4 +97,5 @@ hr {
   margin-top: 30px;
   background-color: #000;
   height: 3px;
+  border: none;
 }
