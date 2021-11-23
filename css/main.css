@@ -60,3 +60,11 @@ input {
   font-weight: bold;
   color: black;
 }
+
+.btn-add {
+  font-weight: bold;
+  margin-left: 215px;
+  border: 2px solid black;
+  padding: 4px 10px;
+  box-shadow: 2px 2px;
+}
