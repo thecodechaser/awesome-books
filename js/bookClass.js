@@ -29,7 +29,7 @@ class Book {
       localStorage.setItem('book', JSON.stringify(this.bookData));
       this.ul.innerHTML += `<li class="book-item">
                    <p class="book-data">"${titleVal}" by ${authorVal}</p>
-                   <button class="remove">Remove</button>
+                   <button class="remove" value="${titleVal}">Remove</button>
                    </li>`;
       this.form.reset();
     });
@@ -40,7 +40,7 @@ class Book {
       if (e.target.classList.contains('remove')) {
         const list = e.target.parentElement;
         this.ul.removeChild(list);
-        const title = list.childNodes[5].value;
+        const title = list.childNodes[3].value;
         this.bookData.filter((book) => book.title !== title);
       }
     });
