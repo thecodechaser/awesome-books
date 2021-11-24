@@ -116,3 +116,34 @@ footer {
 .copyright-details {
   color: white;
 }
+
+/* desktop style */
+
+@media screen and (min-width: 768px) {
+  
+  .header-logo {
+    color: blue;
+  }
+
+  header {
+    display: flex;
+    border: 2px solid #483737;
+    padding: 0 30px;
+    justify-content: space-between;
+  }
+
+  .desktop-menu {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+  }
+
+  .desktop-item {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .desktop-item:hover {
+    color: blue;
+  }
+}

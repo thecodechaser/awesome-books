@@ -61,7 +61,7 @@ class Book {
       books.forEach((data) => {
         this.ul.innerHTML += `<li class="book-item">
                 <p class="book-data">"${data.titleVal}" by ${data.authorVal}</p>
-                <button class="remove" value=${this.title.value} >Remove</button>
+                <button class="remove" value=${data.titleVal} >Remove</button>
                 </li>`;
         this.bookData.push(books);
       });
