@@ -4,7 +4,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(to right, #606c8869, #7380a0),
+  background:
+   linear-gradient(to right, #606c8869, #7380a0),
     url("../images/bg.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
