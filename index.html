@@ -13,7 +13,7 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.1.1/build/global/luxon.min.js"></script>
     <!-- #### stylesheets ####  -->
     <link rel="stylesheet" href="css/main.css" />
     <title>Awesome Books</title>
@@ -23,24 +23,28 @@
       <h3 class="header-logo">Awsome Books</h3>
       <nav>
         <ul class="desktop-menu">
-          <li><a class="desktop-item" href="#">List</a></li>
-          <li><a class="desktop-item" href="#">Add new</a></li>
-          <li><a class="desktop-item" href="#">Contact</a></li>
+          <li><a class="desktop-item list" href="#">List</a></li>
+          <li><a class="desktop-item new" href="#">Add new</a></li>
+          <li><a class="desktop-item contact" href="#">Contact</a></li>
         </ul>
+       
         <div class="mobile-nav">
           <button class="btn-hamburger" type="button"><i class="fas fa-bars"></i></button>
           <div class="mobile-menu-c">
             <button class="btn-close" type="button"><i class="fas fa-times"></i></button>
           <ul class="mobile-menu">
-          <li><a class="mobile-item" href="#">List</a></li>
-          <li><a class="mobile-item" href="#">Add new</a></li>
-          <li><a class="mobile-item" href="#">Contact</a></li>
+          <li><a class="mobile-item list" href="#">List</a></li>
+          <li><a class="mobile-item new" href="#">Add new</a></li>
+          <li><a class="mobile-item contact" href="#">Contact</a></li>
         </ul>
         </div>
         </div>
       </nav>
+     
     </header>
+
     <main>
+      <div class="time"></div>
       <div class="book-list-c">
       <h1 class="main-heading">All Awesome Books</h1>
       <div class="container"></div>
@@ -81,7 +85,9 @@
       <h3 class="copyright-heading">Awsome Books</h3>
       <p class="copyright-details">All Rights Reserved 2021</p>
     </footer>
+    <script src="js/luxon.js"></script> 
     <script src="js/bookClass.js" type="module"></script>
-    <script src="js/mobileMenu.js" ></script>
+    <script src="js/mobileMenu.js" type="module" ></script>
+    
   </body>
 </html>
