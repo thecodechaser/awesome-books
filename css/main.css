@@ -11,6 +11,25 @@ body {
   height: 100vh;
 }
 
+/* header-section */
+
+ header {
+    display: flex;
+    border: 2px solid #483737;
+    padding: 0 30px;
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    color: blue;
+  }
+
+.desktop-menu {
+  display: none;
+}
+
+  /* main-section */
+
 .main-heading {
   text-align: center;
   color: #fff;
@@ -100,6 +119,27 @@ hr {
   border: none;
 }
 
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-heading {
+  color: #fff;
+  font-size: 30px;
+}
+
+.contact-details {
+  color: #fff;
+  font-size: 20px;
+}
+
+.contact-item {
+  color: #fff;
+  font-size: 15px;
+}
+
 footer {
   margin-top: 30px;
   display: flex;
@@ -120,17 +160,6 @@ footer {
 /* desktop style */
 
 @media screen and (min-width: 768px) {
-  
-  .header-logo {
-    color: blue;
-  }
-
-  header {
-    display: flex;
-    border: 2px solid #483737;
-    padding: 0 30px;
-    justify-content: space-between;
-  }
 
   .desktop-menu {
     display: flex;
@@ -145,5 +174,9 @@ footer {
 
   .desktop-item:hover {
     color: blue;
+  }
+
+  .mobile-menu-c {
+    display: none;
   }
 }
