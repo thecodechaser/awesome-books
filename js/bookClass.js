@@ -7,6 +7,7 @@ class Book {
     this.container = document.querySelector('.container');
     this.content = document.createElement('div');
     this.ul = document.createElement('ul');
+    this.ul.className = 'book-items';
     this.content.classList.add('list-of-book');
     this.ul.style.listStyleType = 'none';
     this.content.appendChild(this.ul);
@@ -26,11 +27,9 @@ class Book {
       if (authorVal.trim() === '') return;
       this.bookData.push({ titleVal, authorVal });
       localStorage.setItem('book', JSON.stringify(this.bookData));
-      this.ul.innerHTML += `<li>
-                   <p>${titleVal}</p>
-                   <p>${authorVal}</p>
-                   <button class="remove" value=${titleVal} >Remove</button>
-                   <hr/>
+      this.ul.innerHTML += `<li class="book-item">
+                   <p class="book-data">"${titleVal}" by ${authorVal}</p>
+                   <button class="remove" value="${titleVal}">Remove</button>
                    </li>`;
       this.form.reset();
     });
@@ -41,7 +40,7 @@ class Book {
       if (e.target.classList.contains('remove')) {
         const list = e.target.parentElement;
         this.ul.removeChild(list);
-        const title = list.childNodes[5].value;
+        const title = list.childNodes[3].value;
         this.bookData.filter((book) => book.title !== title);
       }
     });
@@ -52,11 +51,9 @@ class Book {
       if (localStorage.getItem('book')) {
         const books = JSON.parse(localStorage.getItem('book'));
         books.forEach((data) => {
-          this.ul.innerHTML += `<li>
-                  <p>${data.titleVal}</p>
-                  <p>${data.authorVal}</p>
+          this.ul.innerHTML += `<li class="book-item">
+                  <p class="book-data">"${data.titleVal}" by ${data.authorVal}</p>
                   <button class="remove" value=${this.title.value} >Remove</button>
-                  <hr/>
                   </li>`;
           this.bookData.push(books);
         });
