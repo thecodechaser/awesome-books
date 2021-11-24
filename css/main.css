@@ -1,11 +1,11 @@
 /* stylesheet */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(to right, #606c8869, #7380a0),
-    url('../images/bg.jpg') no-repeat center center;
+    url("../images/bg.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
 }
@@ -19,8 +19,13 @@ header {
   justify-content: space-between;
 }
 
+.fa-book-open {
+  margin-top: 5px;
+  font-size: 22px;
+}
+
 .header-logo {
-  color: blue;
+  color: #1b1b8e;
 }
 
 .time {
@@ -103,6 +108,8 @@ h2 {
   font-weight: 600;
 }
 
+/* book-list-section */
+
 .list-of-book {
   border: 2px solid #483737;
   background: #fff;
@@ -145,6 +152,8 @@ h2 {
   font-weight: 400;
 }
 
+/* add-book-section */
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -180,6 +189,8 @@ hr {
   border: none;
 }
 
+/* contact-section */
+
 .contact-section {
   display: flex;
   flex-direction: column;
@@ -201,26 +212,34 @@ hr {
   font-size: 15px;
 }
 
+/* footer-section */
+
 footer {
   margin-top: 30px;
   display: flex;
   border: 2px solid #483737;
   padding: 10px 50px;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 8px;
 }
 
 .copyright-heading {
-  color: blue;
+  color: #1b1b8e;
   margin-top: 13px;
 }
 
 .copyright-details {
   color: white;
+  margin-top: 18px;
 }
 
 /* desktop style */
 
 @media screen and (min-width: 768px) {
+  header {
+    padding: 0 60px;
+  }
+
   .desktop-menu {
     display: flex;
     list-style-type: none;
@@ -238,6 +257,7 @@ footer {
 
   .active {
     color: blue;
+    border-bottom: 1px solid blue;
   }
 
   .mobile-nav {
