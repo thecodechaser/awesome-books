@@ -1,5 +1,4 @@
-import { navigatorHelper } from "./navigation.js";
-
+import { navigatorHelper } from './navigation.js';
 
 navigatorHelper();
 
@@ -8,10 +7,10 @@ const btnClose = document.querySelector('.btn-close');
 const container = document.querySelector('.mobile-menu-c');
 
 function open() {
-  container.style.display= 'block';
+  container.style.display = 'block';
 }
 
-function close () {
+function close() {
   container.style.display = 'none';
 }
 
