@@ -1,3 +1,8 @@
+import { navigatorHelper } from "./navigation.js";
+
+
+navigatorHelper();
+
 const btnOpen = document.querySelector('.btn-hamburger');
 const btnClose = document.querySelector('.btn-close');
 const container = document.querySelector('.mobile-menu-c');
