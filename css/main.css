@@ -99,3 +99,20 @@ hr {
   height: 3px;
   border: none;
 }
+
+footer {
+  margin-top: 30px;
+  display: flex;
+  border: 2px solid #483737;
+  padding: 10px 50px;
+  justify-content: space-between;
+}
+
+.copyright-heading {
+  color: blue;
+  margin-top: 13px;
+}
+
+.copyright-details {
+  color: white;
+}
