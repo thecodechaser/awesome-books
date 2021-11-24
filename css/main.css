@@ -24,6 +24,12 @@ body {
     color: blue;
   }
 
+.time {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
 .desktop-menu {
   display: none;
 }
@@ -232,7 +238,11 @@ footer {
   .desktop-item:hover {
     color: blue;
   }
-
+ 
+  .active {
+    color: blue;
+  }
+  
   .mobile-nav {
     display: none;
   }
