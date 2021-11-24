@@ -17,7 +17,6 @@ class Book {
     this.author = document.querySelector('.author');
     this.bookData = [];
   }
-
   addBook() {
     this.submitBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -26,7 +25,9 @@ class Book {
       if (titleVal.trim() === '') return;
       if (authorVal.trim() === '') return;
       this.bookData.push({ titleVal, authorVal });
-      localStorage.setItem('book', JSON.stringify(this.bookData));
+      const store = JSON.parse(localStorage.getItem('books'));
+      store.push({ titleVal, authorVal });
+      localStorage.setItem('books', JSON.stringify(store));
       this.ul.innerHTML += `<li class="book-item">
                    <p class="book-data">"${titleVal}" by ${authorVal}</p>
                    <button class="remove" value="${titleVal}">Remove</button>
@@ -34,7 +35,6 @@ class Book {
       this.form.reset();
     });
   }
-
   removeBook() {
     this.ul.addEventListener('click', (e) => {
       if (e.target.classList.contains('remove')) {
@@ -42,26 +42,32 @@ class Book {
         this.ul.removeChild(list);
         const title = list.childNodes[3].value;
         this.bookData.filter((book) => book.title !== title);
+        const books = JSON.parse(localStorage.getItem('books'));
+        for (let i = 0; i < books.length; i++) {
+          if (books[i].titleVal === title) {
+            books.splice(i, 1);
+          }
+        }
+        localStorage.setItem('books', JSON.stringify(books));
       }
     });
   }
-
   fetchDatafromStore = () => {
     window.addEventListener('load', () => {
-      if (localStorage.getItem('book')) {
-        const books = JSON.parse(localStorage.getItem('book'));
-        books.forEach((data) => {
-          this.ul.innerHTML += `<li class="book-item">
-                  <p class="book-data">"${data.titleVal}" by ${data.authorVal}</p>
-                  <button class="remove" value=${this.title.value} >Remove</button>
-                  </li>`;
-          this.bookData.push(books);
-        });
+      if (!localStorage.getItem('books')) {
+        localStorage.setItem('books', '[]');
       }
+      const books = JSON.parse(localStorage.getItem('books'));
+      books.forEach((data) => {
+        this.ul.innerHTML += `<li class="book-item">
+                <p class="book-data">"${data.titleVal}" by ${data.authorVal}</p>
+                <button class="remove" value=${this.title.value} >Remove</button>
+                </li>`;
+        this.bookData.push(books);
+      });
     });
   };
 }
-
 const title = document.querySelector('.title');
 const author = document.querySelector('.author');
 const book = new Book(title, author);
