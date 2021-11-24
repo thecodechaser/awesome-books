@@ -28,6 +28,25 @@ body {
   display: none;
 }
 
+/* navbar-section */
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 20px;
+  }
+
+  .mobile-item {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .mobile-item:hover {
+    color: blue;
+  }
+
+
   /* main-section */
 
 .main-heading {
