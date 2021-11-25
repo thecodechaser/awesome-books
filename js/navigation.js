@@ -1,4 +1,4 @@
-export const navigatorHelper = () => {
+export default () => {
   const menuList = document.querySelector('.desktop-menu');
   const menuList2 = document.querySelectorAll('.a');
   const bookList = document.querySelector('.book-list-c');
@@ -12,7 +12,7 @@ export const navigatorHelper = () => {
       formContainer.style.display = 'none';
       contact.style.display = 'none';
       bookList.style.display = 'block';
-      for (var i = 0; i < menuList2.length; i++) {
+      for (let i = 0; i < menuList2.length; i += 1) {
         menuList2[i].classList.remove('active');
       }
       e.target.classList.add('active');
@@ -23,7 +23,7 @@ export const navigatorHelper = () => {
       hr.style.display = 'none';
       contact.style.display = 'none';
       formContainer.style.display = 'flex';
-      for (var i = 0; i < menuList2.length; i++) {
+      for (let i = 0; i < menuList2.length; i += 1) {
         menuList2[i].classList.remove('active');
       }
       e.target.classList.add('active');
@@ -34,7 +34,7 @@ export const navigatorHelper = () => {
       bookList.style.display = 'none';
       hr.style.display = 'none';
       formContainer.style.display = 'none';
-      for (var i = 0; i < menuList2.length; i++) {
+      for (let i = 0; i < menuList2.length; i += 1) {
         menuList2[i].classList.remove('active');
       }
       e.target.classList.add('active');

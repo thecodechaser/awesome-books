@@ -1,3 +1,6 @@
-const time = document.querySelector('.time');
-const dt = luxon.DateTime.now();
-time.textContent = dt.toLocaleString(luxon.DateTime.DATETIME_MED_WITH_SECONDS);
+/* eslint-disable no-undef */
+setInterval(() => {
+  const dt = luxon.DateTime.now();
+  const time = document.querySelector('.time');
+  time.textContent = dt.toLocaleString(luxon.DateTime.DATETIME_MED_WITH_SECONDS);
+}, 1);

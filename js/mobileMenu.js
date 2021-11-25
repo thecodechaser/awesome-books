@@ -1,4 +1,4 @@
-import { navigatorHelper } from './navigation.js';
+import navigatorHelper from './navigation.js';
 
 navigatorHelper();
 

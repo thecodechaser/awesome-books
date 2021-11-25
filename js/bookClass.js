@@ -17,6 +17,7 @@ class Book {
     this.author = document.querySelector('.author');
     this.bookData = [];
   }
+
   addBook() {
     this.submitBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -35,6 +36,7 @@ class Book {
       this.form.reset();
     });
   }
+
   removeBook() {
     this.ul.addEventListener('click', (e) => {
       if (e.target.classList.contains('remove')) {
@@ -43,7 +45,7 @@ class Book {
         const title = list.childNodes[3].value;
         this.bookData.filter((book) => book.title !== title);
         const books = JSON.parse(localStorage.getItem('books'));
-        for (let i = 0; i < books.length; i++) {
+        for (let i = 0; i < books.length; i += 1) {
           if (books[i].titleVal === title) {
             books.splice(i, 1);
           }
@@ -52,6 +54,7 @@ class Book {
       }
     });
   }
+
   fetchDatafromStore = () => {
     window.addEventListener('load', () => {
       if (!localStorage.getItem('books')) {
