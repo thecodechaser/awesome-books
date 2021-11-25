@@ -7,6 +7,13 @@ export default () => {
   const contact = document.querySelector('.contact-section');
   const container = document.querySelector('.mobile-menu-c');
 
+  window.addEventListener('load', () => {
+    formContainer.style.display = 'none';
+    contact.style.display = 'none';
+    bookList.style.display = 'block';
+    menuList2[0].classList.add('active');
+  });
+
   menuList.addEventListener('click', (e) => {
     if (e.target.classList.contains('list')) {
       formContainer.style.display = 'none';
