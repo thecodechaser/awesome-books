@@ -8,9 +8,6 @@ export default () => {
   const container = document.querySelector('.mobile-menu-c');
 
   window.addEventListener('load', () => {
-    formContainer.style.display = 'none';
-    contact.style.display = 'none';
-    bookList.style.display = 'block';
     menuList2[0].classList.add('active');
   });
 
