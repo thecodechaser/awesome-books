@@ -11,6 +11,92 @@ body {
   height: 100vh;
 }
 
+/* header-section */
+
+header {
+  display: flex;
+  border: 2px solid #483737;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+
+.fa-book-open {
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.header-logo {
+  color: #1b1b8e;
+}
+
+.time {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+/* navbar-section */
+
+.btn-hamburger {
+  background: transparent;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.fa-bars {
+  font-size: 30px;
+}
+
+.mobile-menu-c {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  height: 100vh;
+  width: 100vw;
+  background-color: #6070ffde;
+  display: none;
+  backdrop-filter: blur(3px);
+}
+
+.btn-close {
+  background: transparent;
+  border: none;
+  float: right;
+  margin: 20px 55px 0 0;
+}
+
+.fa-times {
+  font-size: 25px;
+  color: #fff;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 20px;
+  margin: 80px 0 0 50px;
+}
+
+.mobile-item {
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+.mobile-item:hover {
+  color: blue;
+  border: 1px solid blue;
+}
+
+/* main-section */
+
 .main-heading {
   text-align: center;
   color: #fff;
@@ -22,6 +108,8 @@ h2 {
   font-size: 25px;
   font-weight: 600;
 }
+
+/* book-list-section */
 
 .list-of-book {
   border: 2px solid #483737;
@@ -65,8 +153,10 @@ h2 {
   font-weight: 400;
 }
 
+/* add-book-section */
+
 .form-container {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
@@ -98,4 +188,80 @@ hr {
   background-color: #000;
   height: 3px;
   border: none;
+}
+
+/* contact-section */
+
+.contact-section {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-heading {
+  color: #fff;
+  font-size: 30px;
+}
+
+.contact-details {
+  color: #fff;
+  font-size: 20px;
+}
+
+.contact-item {
+  color: #fff;
+  font-size: 15px;
+}
+
+/* footer-section */
+
+footer {
+  margin-top: 30px;
+  display: flex;
+  border: 2px solid #483737;
+  padding: 10px 50px;
+  justify-content: space-around;
+  gap: 8px;
+}
+
+.copyright-heading {
+  color: #1b1b8e;
+  margin-top: 13px;
+}
+
+.copyright-details {
+  color: white;
+  margin-top: 18px;
+}
+
+/* desktop style */
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 0 60px;
+  }
+
+  .desktop-menu {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+  }
+
+  .desktop-item {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .desktop-item:hover {
+    color: blue;
+  }
+
+  .active {
+    color: blue;
+    border-bottom: 1px solid blue;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
 }

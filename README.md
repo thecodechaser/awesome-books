@@ -10,9 +10,13 @@
 
 ![screenshot](./images/Screenshot1.png)
 
+![screenshot](./images/Screenshot2.png)
+
 ### Desktop
 
-![screenshot](./images/Screenshot2.png)
+![screenshot](./images/Screenshot3.png)
+
+![screenshot](./images/Screenshot4.png)
 
 Porject's features are added into seperate branch to keep main branch safe.
 
