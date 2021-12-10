@@ -2,7 +2,7 @@
 
 # Awsome Books
 
-> Awesome Books is project that contains list of book's data(titile, author), User can add and remove books to the list.
+> Awesome Books is a website that contains a list of book's data(titile, author), Users can add and remove books from and the list. The website contains three different sections following the SPA(single page application) approach.
 
 ## Screenshots:
 
